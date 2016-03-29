@@ -48,7 +48,7 @@ public class Cook_homepage extends AppCompatActivity {
         adapter.addFragment(new Home_cook(), "HOME");
         adapter.addFragment(new Newsfeed_cook(), "TWO");
         adapter.addFragment(new Profile_cook(), "THREE");
-        adapter.addFragment(new Settings_cook(), "THREE");
+        adapter.addFragment(new Settings_cook(), "FOUR");
         viewPager.setAdapter(adapter);
     }
 
