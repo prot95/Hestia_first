@@ -27,8 +27,7 @@
         <activity
             android:name=".Cook_homepage"
             android:label="@string/title_activity_cook_homepage"
-            android:parentActivityName=".UploadPhoto"
-            android:theme="@style/Tab_layout">
+            android:parentActivityName=".UploadPhoto">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".UploadPhoto" />

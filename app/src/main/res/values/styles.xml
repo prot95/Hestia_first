@@ -24,6 +24,12 @@
         <item name="android:background">@color/actionbar_background</item>
         <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
 
+        <item name="colorPrimary">@color/actionbar_background</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">#fba50f</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="colorAccent">#B01E1E</item>
+
         <!-- Support library compatibility -->
         <item name="background">@color/actionbar_background</item>
         <item name="titleTextStyle">@style/MyActionBarTitleText</item>
