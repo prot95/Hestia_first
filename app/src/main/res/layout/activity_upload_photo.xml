@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="UPLOAD PROFILE PIC"
+        android:text="UPLOAD PROFILE PICTURE"
         android:id="@+id/profilePic"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageButton"
         android:src="@drawable/edit_pencil_logo"
-        android:layout_above="@+id/button"
+        android:layout_alignBottom="@+id/profile_image"
         android:layout_alignRight="@+id/profile_image"
         android:layout_alignEnd="@+id/profile_image" />
 
@@ -45,9 +45,12 @@
         android:text="Register"
         android:layout_gravity="center_horizontal"
         android:onClick="sendMessage"
-        android:layout_marginTop="65dp"
-        android:layout_below="@+id/profile_image"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginBottom="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>
