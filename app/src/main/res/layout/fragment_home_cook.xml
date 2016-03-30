@@ -37,6 +37,7 @@
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
         app:tabMode="fixed"
         android:background="@color/actionbar_background"
         app:tabGravity="fill"

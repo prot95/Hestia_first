@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 public class order_fragment extends Fragment {
 
-    static final String[] order = new String[] { "Breakfast Order" , "Lunch Order", "Dinner Order"};
     static final String[] time = new String[] {"10:00 AM", "2:00 PM", "8:00PM"};
     static final String[] orderNum = new String[]{"5", "7", "2"};
     static final String orderWord = " orders";
@@ -44,7 +43,25 @@ public class order_fragment extends Fragment {
     {
         super.onActivityCreated(savedInstanceState);
 
+        //set Time
+        TextView welcomeTextView = (TextView)getView().findViewById(R.id.breakfast_time);
+        welcomeTextView.setText(time[0]);
 
+        welcomeTextView = (TextView)getView().findViewById(R.id.lunch_time);
+        welcomeTextView.setText(time[1]);
+
+        welcomeTextView = (TextView)getView().findViewById(R.id.dinner_time);
+        welcomeTextView.setText(time[2]);
+
+        //num Order
+        welcomeTextView = (TextView)getView().findViewById(R.id.num_break);
+        welcomeTextView.setText(orderNum[0] + orderWord);
+
+        welcomeTextView = (TextView)getView().findViewById(R.id.num_lunch);
+        welcomeTextView.setText(orderNum[1] + orderWord);
+
+        welcomeTextView = (TextView)getView().findViewById(R.id.num_dinner);
+        welcomeTextView.setText(orderNum[2] + orderWord);
 
     }
 
