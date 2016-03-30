@@ -3,14 +3,21 @@ package com.example.protichi.hestia_first;
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.ListView;
 import android.support.v4.view.ViewPager;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 public class order_fragment extends Fragment {
+
+    static final String[] order = new String[] { "Breakfast Order" , "Lunch Order", "Dinner Order"};
+    static final String[] time = new String[] {"10:00 AM", "2:00 PM", "8:00PM"};
+    static final String[] orderNum = new String[]{"5", "7", "2"};
+    static final String orderWord = " orders";
 
     public order_fragment()
     {
@@ -36,8 +43,8 @@ public class order_fragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState)
     {
         super.onActivityCreated(savedInstanceState);
-        TextView welcomeTextView = (TextView)getView().findViewById(R.id.text);
-        welcomeTextView.setText("ORDER");
+
+
 
     }
 
