@@ -13,12 +13,17 @@ public class CookUserOption extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cook_user_option);
 
+        final Intent intent = getIntent();
+
+
 
         Button cook = (Button) findViewById(R.id.cook);
         cook.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
                 Intent i = new Intent(getApplicationContext(), Cook_homepage.class);
+                i.putExtra("Name", intent.getStringExtra("Name"));
+                i.putExtra("Email", intent.getStringExtra("Email"));
                 startActivity(i);
             }
         });
@@ -26,7 +31,11 @@ public class CookUserOption extends Activity {
         customer.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
+
+                // Change to Customer Activity
                 Intent i = new Intent(getApplicationContext(), Availability.class);
+                i.putExtra("Name", intent.getStringExtra("Name"));
+                i.putExtra("Email", intent.getStringExtra("Email"));
                 startActivity(i);
 
             }

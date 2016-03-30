@@ -46,9 +46,9 @@ public class Cook_homepage extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new Home_cook(), "HOME");
-        adapter.addFragment(new Newsfeed_cook(), "TWO");
-        adapter.addFragment(new Profile_cook(), "THREE");
-        adapter.addFragment(new Settings_cook(), "FOUR");
+        adapter.addFragment(new Newsfeed_cook(), "NEWSFEED");
+        adapter.addFragment(new Profile_cook(), "PROFILE");
+        adapter.addFragment(new Feedback_cook(), "FEEDBACK");
         viewPager.setAdapter(adapter);
     }
 
