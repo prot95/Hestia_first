@@ -84,7 +84,7 @@ public class UploadPhoto extends AppCompatActivity {
     public void sendMessage(View view)
     {
         //store the details and picture on server
-        Intent intent = new Intent(this, Cook_homepage.class);
+        Intent intent = new Intent(this, CookUserOption.class);
         startActivity(intent);
     }
 }
