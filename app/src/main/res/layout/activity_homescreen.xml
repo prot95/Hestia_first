@@ -60,4 +60,15 @@
         android:layout_above="@+id/sign_in"
         android:layout_centerHorizontal="true" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView7"
+        android:scaleY="0.7"
+        android:scaleX="0.7"
+        android:src="@drawable/hestia_logo"
+        android:layout_above="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

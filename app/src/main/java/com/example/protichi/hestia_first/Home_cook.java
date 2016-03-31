@@ -72,6 +72,7 @@ public class Home_cook extends Fragment {
 
         Button menu = (Button) getView().findViewById(R.id.menu);
 
+        name =  getActivity().getIntent().getStringExtra("Name");
         String text = welcomeText + name;
         welcomeTextView.setText(text);
         viewPager = (ViewPager)getView().findViewById(R.id.viewpager);

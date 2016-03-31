@@ -32,12 +32,35 @@ public class Profile_cook extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState)
     {
         super.onActivityCreated(savedInstanceState);
+
         EditText firstName = (EditText) getView().findViewById(R.id.editText);
-        EditText lasttName = (EditText) getView().findViewById(R.id.editText2);
+        EditText lastName = (EditText) getView().findViewById(R.id.editText2);
         EditText location = (EditText) getView().findViewById(R.id.editText3);
-        EditText phone = (EditText) getView().findViewById(R.id.editText6);
-        EditText email = (EditText) getView().findViewById(R.id.editText7);
+        EditText phone = (EditText) getView().findViewById(R.id.editText5);
+        EditText email = (EditText) getView().findViewById(R.id.editText6);
         Switch user_toggle = (Switch) getView().findViewById(R.id.switch1);
+
+        firstName.setText(getActivity().getIntent().getStringExtra("Name").split(" ")[0]);
+        lastName.setText(getActivity().getIntent().getStringExtra("Name").split(" ")[1]);
+        email.setText(getActivity().getIntent().getStringExtra("Email"));
+        if(getActivity().getIntent().getStringArrayExtra("Phone") == null) {
+
+            phone.setText("9013130999");
+        }
+        else
+        {
+            phone.setText(getActivity().getIntent().getStringExtra("Email"));
+        }
+        if(getActivity().getIntent().getStringArrayExtra("Address") == null) {
+
+            location.setText("IIIT-Delhi, Okhla Phase 3");
+        }
+        else
+        {
+            phone.setText(getActivity().getIntent().getStringExtra("Address"));
+        }
+
+
 
         //set the switch to ON
         user_toggle.setChecked(true);

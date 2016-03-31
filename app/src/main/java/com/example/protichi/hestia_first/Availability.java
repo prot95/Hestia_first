@@ -20,8 +20,8 @@ public class Availability extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_availability);
 
-        //getSupportActionBar().setDisplayShowTitleEnabled(false);
-        //getSupportActionBar().setDisplayShowCustomEnabled(true);
+        //getActionBar().setDisplayShowTitleEnabled(false);
+        //getActionBar().setDisplayShowCustomEnabled(true);
         //getSupportActionBar().setCustomView(R.layout.actionbar_layout);
 
 
