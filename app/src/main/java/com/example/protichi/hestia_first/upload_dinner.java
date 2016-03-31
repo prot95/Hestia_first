@@ -27,7 +27,7 @@ public class upload_dinner extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_upload_dinner, container, false);
+        return inflater.inflate(R.layout.fragment_upload_menu, container, false);
     }
 
 
