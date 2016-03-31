@@ -1,5 +1,6 @@
 package com.example.protichi.hestia_first;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -47,6 +49,30 @@ public class Home_cook extends Fragment {
         View setView = inflater.inflate(R.layout.fragment_home_cook, container, false);
         // Inflate the layout for this fragment
 
+        Button button = (Button) setView.findViewById(R.id. menu);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                // do something
+                Intent intent = new Intent(getActivity(), upload_menu.class);
+                startActivity(intent);
+            }
+        });
+
+        button = (Button) setView.findViewById(R.id.availibility);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                // do something
+                Intent intent = new Intent(getActivity(), Availability.class);
+                startActivity(intent);
+            }
+        });
+
         return setView;
 
     }
@@ -55,7 +81,9 @@ public class Home_cook extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState)
     {
         TextView welcomeTextView = (TextView)getView().findViewById(R.id.welcomeText);
-        String text = welcomeText + name;
+        String text = welcomeText;
+        welcomeTextView = (TextView)getView().findViewById(R.id.chef_name);
+        text = name;
         welcomeTextView.setText(text);
         viewPager = (ViewPager)getView().findViewById(R.id.viewpager);
         setupViewPager(viewPager);

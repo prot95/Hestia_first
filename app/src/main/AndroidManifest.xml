@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.protichi.hestia_first">
+    package="com.example.protichi.hestia_first" >
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/CustomActionBarTheme">
+        android:theme="@style/CustomActionBarTheme" >
         <activity
             android:name=".RegisterPage"
             android:label="@string/app_name" />
         <activity
             android:name=".UploadPhoto"
             android:label="@string/title_activity_upload_photo"
-            android:parentActivityName=".RegisterPage">
+            android:parentActivityName=".RegisterPage" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".RegisterPage" />
@@ -21,12 +21,12 @@
         <activity
             android:name=".Cook_homepage"
             android:label="@string/title_activity_cook_homepage"
-            android:parentActivityName=".UploadPhoto">
+            android:parentActivityName=".UploadPhoto" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".UploadPhoto" />
         </activity>
-        <activity android:name=".Homescreen">
+        <activity android:name=".Homescreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,7 +34,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".CookUserOption" />
-        <activity android:name=".Availability"></activity>
+        <activity android:name=".Availability" />
+        <activity
+            android:name=".upload_menu"
+            android:label="@string/title_activity_upload_menu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Cook_homepage" />
+        </activity>
     </application>
 
 </manifest>

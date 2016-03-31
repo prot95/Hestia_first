@@ -30,6 +30,16 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="30dp"
+            android:id="@+id/chef_name"
+            android:layout_below="@+id/welcomeText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
     </RelativeLayout>
 
 
