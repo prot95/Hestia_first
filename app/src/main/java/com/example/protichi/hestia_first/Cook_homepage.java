@@ -84,7 +84,7 @@ public class Cook_homepage extends AppCompatActivity {
         }
 
         @Override
-            public Fragment getItem(int position) {
+        public Fragment getItem(int position) {
             return mFragmentList.get(position);
         }
 
