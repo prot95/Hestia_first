@@ -40,9 +40,29 @@ public class Profile_cook extends Fragment {
         EditText email = (EditText) getView().findViewById(R.id.editText6);
         Switch user_toggle = (Switch) getView().findViewById(R.id.switch1);
 
-        firstName.setText(getActivity().getIntent().getStringExtra("Name").split(" ")[0]);
-        lastName.setText(getActivity().getIntent().getStringExtra("Name").split(" ")[1]);
-        email.setText(getActivity().getIntent().getStringExtra("Email"));
+
+        if(getActivity().getIntent().getStringArrayExtra("Name") == null) {
+                firstName.setText("Rachna");
+        }
+        else
+        {
+            firstName.setText(getActivity().getIntent().getStringExtra("Name"));
+        }
+        if(getActivity().getIntent().getStringArrayExtra("Name") == null) {
+            lastName.setText("Agrawal");
+        }
+        else
+        {
+            lastName.setText(getActivity().getIntent().getStringExtra("Name"));
+        }
+        if(getActivity().getIntent().getStringArrayExtra("Email") == null) {
+            email.setText("rachnagr@gmail.com");
+        }
+        else
+        {
+            email.setText(getActivity().getIntent().getStringExtra("Email"));
+        }
+        //email.setText(getActivity().getIntent().getStringExtra("Email"));
         if(getActivity().getIntent().getStringArrayExtra("Phone") == null) {
 
             phone.setText("9013130999");

@@ -71,8 +71,22 @@ public class Home_cook extends Fragment {
 
 
         Button menu = (Button) getView().findViewById(R.id.menu);
+        menu.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+
+                // Change to Customer Activity
+                Intent i = new Intent(getView().getContext(), upload_menu.class);
+                startActivity(i);
+
+            }
+        });
 
         name =  getActivity().getIntent().getStringExtra("Name");
+        if( name == null)
+        {
+            name = "Rachna";
+        }
         String text = welcomeText + name;
         welcomeTextView.setText(text);
         viewPager = (ViewPager)getView().findViewById(R.id.viewpager);

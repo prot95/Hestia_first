@@ -26,6 +26,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".UploadPhoto" />
         </activity>
+        <activity
+            android:name=".upload_menu"
+            android:label="@string/title_activity_cook_homepage"/>
+
+
+
         <activity android:name=".Homescreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,6 +39,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
         <activity android:name=".CookUserOption" />
         <activity android:name=".Availability"></activity>
     </application>
