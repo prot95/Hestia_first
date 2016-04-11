@@ -1,80 +1,64 @@
 package com.example.protichi.hestia_first;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.PopupMenu;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ListView;
-import android.widget.Toast;
-
-import com.android.volley.Cache;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.JsonObjectRequest;
+import android.support.v7.app.AppCompatActivity;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.List;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.widget.ListView;
+
+import com.android.volley.Cache;
+import com.android.volley.Cache.Entry;
+import com.android.volley.Request.Method;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonObjectRequest;
 
 import newsfeed.AppController;
 import newsfeed.FeedItem;
 import newsfeed.FeedListAdapter;
 
+/**
+ * Created by Chanchal on 3/30/2016.
+ */
+public class NewsFeed extends AppCompatActivity{
 
-public class Newsfeed_cook extends Fragment {
-
-    private static final String TAG = Newsfeed_cook.class.getSimpleName();
+    private static final String TAG = "ListView Newsfeed";
     private ListView listView;
     private FeedListAdapter listAdapter;
     private List<FeedItem> feedItems;
     private String URL_FEED = "https://raw.githubusercontent.com/JuhiB/DHCS/master/feed.json";
 
-    public Newsfeed_cook() {
-        // Required empty public constructor
-    }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.act_main);
 
 
-    }
+        Log.e(TAG, "NewsFeed has started successfully");
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.act_main, container, false);
-
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        LayoutInflater layoutinflater = getActivity().getLayoutInflater();
-
-        listView = (ListView) getView().findViewById(R.id.list);
+        listView = (ListView) findViewById(R.id.list);
 
         feedItems = new ArrayList<FeedItem>();
 
-        listAdapter = new FeedListAdapter( layoutinflater,feedItems);
+        listAdapter = new FeedListAdapter(LayoutInflater.from(this), feedItems);
         listView.setAdapter(listAdapter);
 
 
 
         // We first check for cached request
         Cache cache = AppController.getInstance().getRequestQueue().getCache();
-        Cache.Entry entry = cache.get(URL_FEED);
+        Entry entry = cache.get(URL_FEED);
         if (entry != null) {
             // fetch the data from cache
             try {
@@ -90,7 +74,7 @@ public class Newsfeed_cook extends Fragment {
 
         } else {
             // making fresh volley request and getting json
-            JsonObjectRequest jsonReq = new JsonObjectRequest(Request.Method.GET,
+            JsonObjectRequest jsonReq = new JsonObjectRequest(Method.GET,
                     URL_FEED, null, new Response.Listener<JSONObject>() {
 
                 @Override
@@ -111,8 +95,12 @@ public class Newsfeed_cook extends Fragment {
             // Adding request to volley request queue
             AppController.getInstance().addToRequestQueue(jsonReq);
         }
+
     }
 
+    /**
+     * Parsing json reponse and passing the data to feed view list adapter
+     * */
     private void parseJsonFeed(JSONObject response) {
         try {
             JSONArray feedArray = response.getJSONArray("feed");
@@ -147,7 +135,11 @@ public class Newsfeed_cook extends Fragment {
         }
     }
 
+    /*@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }*/
 
-
-}
+    }
 
