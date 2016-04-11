@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.protichi.hestia_first.order_event_layout"
@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/orderColor">
+        >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -17,55 +18,72 @@
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/breakfast_time"/>
+                android:id="@+id/breakfast_time"
+                android:textSize="20dp"/>
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/breakfast"
-                android:text="Breakfast Order"/>
+                android:text="Breakfast Order"
+                android:textSize="20dp"/>
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/num_break"/>
+                android:id="@+id/num_break"
+                android:textSize="20dp"/>
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/lunch_time"
+                android:textSize="20dp"
                 />
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/lunch"
-                android:text="Lunch Order"/>
+                android:text="Lunch Order"
+                android:textSize="20dp"/>
+
+
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/num_lunch"/>
+                android:id="@+id/num_lunch"
+                android:textSize="20dp"/>
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/dinner_time"/>
+                android:id="@+id/dinner_time"
+                android:textSize="20dp"/>
+
+
+
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/dinner"
-                android:text="Dinner Order"/>
+                android:text="Dinner Order"
+                android:textSize="20dp"/>
+
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/num_dinner"/>
+                android:id="@+id/num_dinner"
+                android:textSize="20dp"/>
 
         </LinearLayout>
     </LinearLayout>
@@ -75,4 +93,4 @@
 
 
 
-</LinearLayout>
+</RelativeLayout>

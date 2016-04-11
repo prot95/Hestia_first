@@ -40,27 +40,34 @@ public class Profile_cook extends Fragment {
         EditText email = (EditText) getView().findViewById(R.id.editText6);
         Switch user_toggle = (Switch) getView().findViewById(R.id.switch1);
 
+        User user = User.getInstance();
+        firstName.setText(user.firstName);
+        lastName.setText(user.lastName);
+        email.setText(user.emailID);
+        phone.setText(user.phoneNum);
+        location.setText(user.location);
 
-        if(getActivity().getIntent().getStringArrayExtra("Name") == null) {
+
+        /*if(getActivity().getIntent().getStringArrayExtra("Name") == null) {
                 firstName.setText("Rachna");
         }
         else
         {
-            firstName.setText(getActivity().getIntent().getStringExtra("Name"));
+            firstName.setText(user.firstName);
         }
         if(getActivity().getIntent().getStringArrayExtra("Name") == null) {
             lastName.setText("Agrawal");
         }
         else
         {
-            lastName.setText(getActivity().getIntent().getStringExtra("Name"));
+            lastName.setText(user.lastName);
         }
         if(getActivity().getIntent().getStringArrayExtra("Email") == null) {
             email.setText("rachnagr@gmail.com");
         }
         else
         {
-            email.setText(getActivity().getIntent().getStringExtra("Email"));
+            email.setText(user.emailID);
         }
         //email.setText(getActivity().getIntent().getStringExtra("Email"));
         if(getActivity().getIntent().getStringArrayExtra("Phone") == null) {
@@ -77,8 +84,8 @@ public class Profile_cook extends Fragment {
         }
         else
         {
-            phone.setText(getActivity().getIntent().getStringExtra("Address"));
-        }
+            phone.setText();
+        }*/
 
 
 

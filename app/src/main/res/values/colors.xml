@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="actionbar_background">#fba500</color>
+    <color name="actionbar_background">#b1252c</color>
+    <color name="actionbar1_background">#fba500</color>
     <color name="actionbar_text">#ffffff</color>
     <color name="orderColor"> #fffa78</color>
     <color name="buttonColor"> #B01E1E</color>
+    <color name="white">#ffffff</color>
 </resources>

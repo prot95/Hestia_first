@@ -114,6 +114,8 @@ public class Availability extends Activity {
                 }
                 Log.v("Availability",available.toString());
                 Intent i = new Intent(getApplicationContext(), Cook_homepage.class);
+                User user = User.getInstance();
+                user.availability = available;
                 i.putStringArrayListExtra("availability", available);
 
                 startActivity(i);

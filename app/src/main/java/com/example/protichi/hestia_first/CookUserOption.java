@@ -22,10 +22,10 @@ public class CookUserOption extends Activity {
             public void onClick(View v) {
                 // Perform action on click
                 Intent i = new Intent(getApplicationContext(), Cook_homepage.class);
-                i.putExtra("Name", intent.getStringExtra("Name"));
-                i.putExtra("Email", intent.getStringExtra("Email"));
-                i.putExtra("Address", intent.getStringExtra("Address"));
-                i.putExtra("Phone", intent.getStringExtra("Phone"));
+                //i.putExtra("Name", intent.getStringExtra("Name"));
+                //i.putExtra("Email", intent.getStringExtra("Email"));
+                //i.putExtra("Address", intent.getStringExtra("Address"));
+                //i.putExtra("Phone", intent.getStringExtra("Phone"));
                 startActivity(i);
             }
         });
@@ -36,10 +36,10 @@ public class CookUserOption extends Activity {
 
                 // Change to Customer Activity
                 Intent i = new Intent(getApplicationContext(), Availability.class);
-                i.putExtra("Name", intent.getStringExtra("Name"));
-                i.putExtra("Email", intent.getStringExtra("Email"));
-                i.putExtra("Address", intent.getStringExtra("Address"));
-                i.putExtra("Phone", intent.getStringExtra("Phone"));
+                //i.putExtra("Name", intent.getStringExtra("Name"));
+                //i.putExtra("Email", intent.getStringExtra("Email"));
+                //i.putExtra("Address", intent.getStringExtra("Address"));
+                //i.putExtra("Phone", intent.getStringExtra("Phone"));
                 startActivity(i);
 
             }

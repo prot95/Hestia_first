@@ -19,9 +19,9 @@ import java.util.List;
 
 public class Home_cook extends Fragment {
     //receive this field from register/sign in page
-    private String name="Rachna";
+    private String name="Chef Rachna";
 
-    private String welcomeText = "Namaste, Chef ";
+    private String welcomeText = "Namaste, ";
     private ViewPager viewPager;
     private TabLayout tabLayout;
 
@@ -82,12 +82,14 @@ public class Home_cook extends Fragment {
             }
         });
 
-        name =  getActivity().getIntent().getStringExtra("Name");
-        if( name == null)
+        //name =  getActivity().getIntent().getStringExtra("Name");
+        User user = User.getInstance();
+        name = user.firstName + " " + user.lastName;
+        /*if( name == null)
         {
-            name = "Rachna";
-        }
-        String text = welcomeText + name;
+            name = "Rachna Agrawal";
+        }*/
+        String text = "Chef " + name;
         welcomeTextView.setText(text);
         viewPager = (ViewPager)getView().findViewById(R.id.viewpager);
         setupViewPager(viewPager);
