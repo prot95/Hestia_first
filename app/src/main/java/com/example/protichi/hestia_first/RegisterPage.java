@@ -95,17 +95,19 @@ public class RegisterPage extends AppCompatActivity implements AdapterView.OnIte
         Intent intent = new Intent(this, UploadPhoto.class);
         EditText editText = (EditText) findViewById(R.id.name);
         String message = editText.getText().toString();
-        intent.putExtra("name", message);
+        intent.putExtra("Name", message);
 
         editText = (EditText) findViewById(R.id.phone);
         message = editText.getText().toString();
-        intent.putExtra("phone", message);
+        intent.putExtra("Phone", message);
 
         editText = (EditText) findViewById(R.id.address);
         message = editText.getText().toString();
-        intent.putExtra("address", message);
+        intent.putExtra("Address", message);
 
-        intent.putExtra("location", item);
+        editText = (EditText) findViewById(R.id.email);
+        message = editText.getText().toString();
+        intent.putExtra("Email", message);
         startActivity(intent);
     }
 }

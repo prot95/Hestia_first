@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 public class UploadPhoto extends AppCompatActivity {
@@ -85,6 +86,11 @@ public class UploadPhoto extends AppCompatActivity {
     {
         //store the details and picture on server
         Intent intent = new Intent(this, CookUserOption.class);
+        Intent i = getIntent();
+        intent.putExtra("Name", i.getStringExtra("Name"));
+        intent.putExtra("Phone", i.getStringExtra("Phone"));
+        intent.putExtra("Address", i.getStringExtra("Address"));
+        intent.putExtra("Location", i.getStringExtra("Location"));
         startActivity(intent);
     }
 }

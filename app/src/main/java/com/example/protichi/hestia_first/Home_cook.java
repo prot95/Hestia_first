@@ -49,30 +49,6 @@ public class Home_cook extends Fragment {
         View setView = inflater.inflate(R.layout.fragment_home_cook, container, false);
         // Inflate the layout for this fragment
 
-        Button button = (Button) setView.findViewById(R.id. menu);
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                // do something
-                Intent intent = new Intent(getActivity(), upload_menu.class);
-                startActivity(intent);
-            }
-        });
-
-        button = (Button) setView.findViewById(R.id.availibility);
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                // do something
-                Intent intent = new Intent(getActivity(), Availability.class);
-                startActivity(intent);
-            }
-        });
-
         return setView;
 
     }
@@ -81,9 +57,23 @@ public class Home_cook extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState)
     {
         TextView welcomeTextView = (TextView)getView().findViewById(R.id.welcomeText);
-        String text = welcomeText;
-        welcomeTextView = (TextView)getView().findViewById(R.id.chef_name);
-        text = name;
+        Button availability = (Button) getView().findViewById(R.id.availability);
+        availability.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+
+                // Change to Customer Activity
+                Intent i = new Intent(getView().getContext(), Availability.class);
+                startActivity(i);
+
+            }
+        });
+
+
+        Button menu = (Button) getView().findViewById(R.id.menu);
+
+        name =  getActivity().getIntent().getStringExtra("Name");
+        String text = welcomeText + name;
         welcomeTextView.setText(text);
         viewPager = (ViewPager)getView().findViewById(R.id.viewpager);
         setupViewPager(viewPager);
