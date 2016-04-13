@@ -92,21 +92,34 @@ public class RegisterPage extends AppCompatActivity implements AdapterView.OnIte
     //Put check that all the fields are chosen before making NEXT clickable
     public void sendMessage(View view)
     {
+        User user = User.getInstance();
         Intent intent = new Intent(this, UploadPhoto.class);
         EditText editText = (EditText) findViewById(R.id.name);
         String message = editText.getText().toString();
+        if(message.indexOf(" ")>0) {
+            user.firstName = message.split(" ")[0];
+            user.lastName = message.split(" ")[1];
+        }
+        else
+        {
+            user.firstName = message;
+            user.lastName = "";
+        }
         intent.putExtra("Name", message);
 
         editText = (EditText) findViewById(R.id.phone);
         message = editText.getText().toString();
+        user.phoneNum = message;
         intent.putExtra("Phone", message);
 
         editText = (EditText) findViewById(R.id.address);
         message = editText.getText().toString();
+        user.location = message;
         intent.putExtra("Address", message);
 
         editText = (EditText) findViewById(R.id.email);
         message = editText.getText().toString();
+        user.emailID = message;
         intent.putExtra("Email", message);
         startActivity(intent);
     }

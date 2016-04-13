@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class order_fragment extends Fragment {
 
-    static final String[] time = new String[] {"10:00 AM", "2:00 PM", "8:00PM"};
+    static final String[] time = new String[] {"10:00 AM", "02:00 PM", "08:00PM"};
     static final String[] orderNum = new String[]{"5", "7", "2"};
     static final String orderWord = " orders";
 

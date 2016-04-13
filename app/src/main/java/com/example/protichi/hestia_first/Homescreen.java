@@ -117,9 +117,13 @@ public class Homescreen extends AppCompatActivity implements
             Log.v("Signed In", acct.getDisplayName());
             Log.v("Signed In", acct.getEmail());
 
+            User user = User.getInstance();
+            user.firstName = acct.getDisplayName().split(" ")[0];
+            user.lastName = acct.getDisplayName().split(" ")[1];
+            user.emailID= acct.getEmail();
             Intent i = new Intent(this,CookUserOption.class);
-            i.putExtra("Name", acct.getDisplayName());
-            i.putExtra("Email", acct.getEmail());
+            //i.putExtra("Name", acct.getDisplayName());
+            //i.putExtra("Email", acct.getEmail());
             startActivity(i);
             //mStatusTextView.setText(getString(R.string.signed_in_fmt, acct.getDisplayName()));
             //updateUI(true);

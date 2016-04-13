@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class event_fragment extends Fragment {
 
-    static final String[] time = new String[] {"10:00 AM", "2:00 PM"};
+    static final String[] time = new String[] {"10:00 AM", "02:00 PM"};
     static final String[] event = new String[]{"Italian Food Class", "Dosa class"};
     public event_fragment(){}
 

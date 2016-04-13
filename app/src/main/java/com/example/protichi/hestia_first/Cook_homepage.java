@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -102,6 +103,11 @@ public class Cook_homepage extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
         }
+    }
+
+    public void onActionButtonClick(View view)
+    {
+
     }
 
 }

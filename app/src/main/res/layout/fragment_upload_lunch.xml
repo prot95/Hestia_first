@@ -4,7 +4,7 @@
     tools:context="com.example.protichi.hestia_first.upload_lunch"
     android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!--&lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;
     <TextView android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/day"
@@ -13,5 +13,44 @@
         android:layout_width="fill_parent"
         android:layout_height="1dip"
         android:background="#000000" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Item"
+        android:id="@+id/add_item"
+        android:background="@color/buttonColor"
+        android:layout_gravity="center_horizontal" />-->
+
+    <EditText
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:hint="Item Name"
+        android:id="@+id/item"
+        android:layout_gravity="center_horizontal" />
+    <EditText
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:hint="Rate"
+        android:id="@+id/rate"
+        android:layout_gravity="center_horizontal" />
+    <EditText
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:hint="Cuisine"
+        android:id="@+id/cuisine"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:text="Add Item"
+        android:textColor="#ffffff"
+        android:id="@+id/add_item"
+        android:background="@color/buttonColor"
+        android:layout_gravity="center_horizontal" />
+
 
 </LinearLayout>

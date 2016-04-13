@@ -1,10 +1,12 @@
 package com.example.protichi.hestia_first;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -41,8 +43,18 @@ public class upload_breakfast extends Fragment {
         View child = getActivity().getLayoutInflater().inflate(R.layout.fragment_upload_lunch, null);
 
         layout_upload_menu.addView(child);
-        TextView t_child = (TextView)getView().findViewById(R.id.day);
-        t_child.setText("MONDAY");
+        Button availability = (Button) getView().findViewById(R.id.add_item);
+        availability.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+
+                // Change to Customer Activity
+                Intent i = new Intent(getView().getContext(), Cook_homepage.class);
+                startActivity(i);
+
+            }
+        });
+
 
     }
 

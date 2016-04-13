@@ -10,8 +10,10 @@ import android.widget.CheckBox;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.Objects;
 
 public class Availability extends Activity {
 
@@ -35,6 +37,12 @@ public class Availability extends Activity {
         Button save = (Button) findViewById(R.id.button2);
 
         final ArrayList available = new ArrayList();
+        ArrayList current_availability = User.getInstance().availability;
+        if(!current_availability.isEmpty())
+        {
+            Log.v("Current Availability", current_availability.toString());
+
+        }
 
         Calendar c = Calendar.getInstance();
 
@@ -44,14 +52,28 @@ public class Availability extends Activity {
 
         final String formattedDate1 = df.format(c.getTime());
         String weekDay = dayFormat.format(c.getTime());
-        //System.out.println(formattedDate);
         box1.setText(formattedDate1 + " : " + weekDay + " " + "(Today)");
+        Log.v("Availability", formattedDate1);
+        if(current_availability.contains((Object)formattedDate1))
+        {
+            Log.v("Availability", "True");
+            box1.setChecked(true);
+        }
+        else
+        {
+            Log.v("Availability", "False");
+
+        }
 
         c.add(Calendar.DATE, 1);
         final String formattedDate2 = df.format(c.getTime());
         weekDay = dayFormat.format(c.getTime());
         box2.setText(formattedDate2 + " : " + weekDay);
         //Log.v("NEXT DATE : ", formattedDate);
+        if(current_availability.contains((Object)formattedDate2))
+        {
+            box2.setChecked(true);
+        }
 
 
         c.add(Calendar.DATE, 1);
@@ -59,30 +81,53 @@ public class Availability extends Activity {
         weekDay = dayFormat.format(c.getTime());
         box3.setText(formattedDate3 + " : " + weekDay);
         //Log.v("NEXT DATE : ", formattedDate);
+        if(current_availability.contains((Object)formattedDate3))
+        {
+            box3.setChecked(true);
+        }
 
         c.add(Calendar.DATE, 1);
         final String formattedDate4 = df.format(c.getTime());
         weekDay = dayFormat.format(c.getTime());
         box4.setText(formattedDate4 + " : " + weekDay);
         //Log.v("NEXT DATE : ", formattedDate);
+        if(current_availability.contains((Object)formattedDate4))
+        {
+            box4.setChecked(true);
+        }
 
         c.add(Calendar.DATE, 1);
         final String formattedDate5 = df.format(c.getTime());
         weekDay = dayFormat.format(c.getTime());
         box5.setText(formattedDate5 + " : " + weekDay);
         //Log.v("NEXT DATE : ", formattedDate);
+        if(current_availability.contains((Object)formattedDate5))
+        {
+            box5.setChecked(true);
+        }
 
         c.add(Calendar.DATE, 1);
         final String formattedDate6 = df.format(c.getTime());
         weekDay = dayFormat.format(c.getTime());
         box6.setText(formattedDate6 + " : " + weekDay);
         //Log.v("NEXT DATE : ", formattedDate);
+        if(current_availability.contains((Object)formattedDate6))
+        {
+            box6.setChecked(true);
+        }
 
         c.add(Calendar.DATE, 1);
         final String formattedDate7 = df.format(c.getTime());
         weekDay = dayFormat.format(c.getTime());
         box7.setText(formattedDate7 + " : " + weekDay);
        // Log.v("NEXT DATE : ", formattedDate);
+        if( current_availability.contains((Object)formattedDate7))
+        {
+            box7.setChecked(true);
+        }
+
+
+
 
         save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -112,10 +157,12 @@ public class Availability extends Activity {
                 {
                     available.add(formattedDate7);
                 }
-                Log.v("Availability",available.toString());
+                Log.v("Saved Availability",available.toString());
+                User user = User.getInstance();
+                user.availability = available;
+
                 Intent i = new Intent(getApplicationContext(), Cook_homepage.class);
                 i.putStringArrayListExtra("availability", available);
-
                 startActivity(i);
 
             }
