@@ -19,7 +19,7 @@ import java.util.List;
 public class RegisterPage extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private String item="None";
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 

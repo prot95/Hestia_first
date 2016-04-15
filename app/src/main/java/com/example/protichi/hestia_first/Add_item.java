@@ -57,7 +57,7 @@ public class Add_item extends AppCompatActivity {
                 checkBoxes[j].setChecked(false);
             checkBoxes[j].setText(d);
             checkBoxes[j].setId(j);
-            lm.addView(checkBoxes[j]);
+           // lm.addView(checkBoxes[j]);
             j++;
         }
 
