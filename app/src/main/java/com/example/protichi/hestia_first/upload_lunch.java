@@ -170,7 +170,7 @@ public class upload_lunch extends Fragment {
                     TextView product = new TextView(getActivity());
 
                     product.setText(m.itemName);
-                    product.setTextSize((12 * scale));
+                    product.setTextSize((6 * scale));
                     product.setTypeface(null, Typeface.BOLD);
                     product.setGravity(Gravity.CENTER);
                     ll.addView(product);
@@ -178,7 +178,7 @@ public class upload_lunch extends Fragment {
                     TextView rate = new TextView(getActivity());
 
                     rate.setText("Rate: " + m.rate + " per " + m.unit);
-                    rate.setTextSize((10 * scale));
+                    rate.setTextSize((5 * scale));
                     rate.setTypeface(null, Typeface.BOLD);
                     rate.setGravity(Gravity.CENTER);
                     ll.addView(rate);
@@ -187,7 +187,7 @@ public class upload_lunch extends Fragment {
                     if(m.isVeg==1)
                         foodType.setText("Veg");
                     else foodType.setText("Non Veg");
-                    foodType.setTextSize((10 * scale));
+                    foodType.setTextSize((5 * scale));
                     foodType.setTypeface(null, Typeface.BOLD);
                     foodType.setGravity(Gravity.CENTER);
                     ll.addView(foodType);
@@ -195,7 +195,7 @@ public class upload_lunch extends Fragment {
                     TextView description = new TextView(getActivity());
 
                     description.setText(m.description);
-                    description.setTextSize((10 * scale));
+                    description.setTextSize((5 * scale));
                     description.setTypeface(null, Typeface.BOLD);
                     description.setGravity(Gravity.CENTER);
                     ll.addView(description);

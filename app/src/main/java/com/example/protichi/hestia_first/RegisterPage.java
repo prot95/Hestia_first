@@ -3,6 +3,7 @@ package com.example.protichi.hestia_first;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -92,10 +93,16 @@ public class RegisterPage extends AppCompatActivity implements AdapterView.OnIte
     //Put check that all the fields are chosen before making NEXT clickable
     public void sendMessage(View view)
     {
+        int flag =0;
         User user = User.getInstance();
         Intent intent = new Intent(this, UploadPhoto.class);
         EditText editText = (EditText) findViewById(R.id.name);
         String message = editText.getText().toString();
+        if(message.equals(""))
+        {
+            flag =1;
+        }
+
         if(message.indexOf(" ")>0) {
             user.firstName = message.split(" ")[0];
             user.lastName = message.split(" ")[1];
@@ -109,18 +116,37 @@ public class RegisterPage extends AppCompatActivity implements AdapterView.OnIte
 
         editText = (EditText) findViewById(R.id.phone);
         message = editText.getText().toString();
+        if(message.equals(""))
+        {
+            flag =1;
+        }
         user.phoneNum = message;
         intent.putExtra("Phone", message);
 
         editText = (EditText) findViewById(R.id.address);
         message = editText.getText().toString();
+        if(message.equals(""))
+        {
+            flag =1;
+        }
         user.location = message;
         intent.putExtra("Address", message);
 
         editText = (EditText) findViewById(R.id.email);
         message = editText.getText().toString();
+        if(message.equals(""))
+        {
+            flag =1;
+        }
         user.emailID = message;
         intent.putExtra("Email", message);
-        startActivity(intent);
+        if(flag ==0) {
+            startActivity(intent);
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(), "Please make sure all fields are filled properly", Toast.LENGTH_LONG).show();
+
+        }
     }
 }
