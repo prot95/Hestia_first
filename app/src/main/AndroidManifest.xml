@@ -43,7 +43,11 @@
 
         <activity android:name=".NewsFeed"></activity>
 
-
+        <activity
+            android:name=".Add_item"
+            android:label="@string/title_activity_add_item"
+            android:parentActivityName=".upload_menu" >
+        </activity>
 
         <activity android:name=".CookUserOption" />
         <activity android:name=".Availability"></activity>
