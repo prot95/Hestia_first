@@ -24,6 +24,7 @@ public class UserOrderCheck extends AppCompatActivity{
     public void onClickNewOrder(View view)
     {
         Intent intent = new Intent(this,User_homepage.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 }

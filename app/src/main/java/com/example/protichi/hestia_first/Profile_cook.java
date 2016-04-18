@@ -107,6 +107,7 @@ public class Profile_cook extends Fragment {
                 } else {
                     Log.v("Toggle Button", "User UI");
                     Intent i = new Intent(getContext(), User_homepage.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(i);
 
                 }

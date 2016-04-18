@@ -64,6 +64,7 @@ public class Home_cook extends Fragment {
 
                 // Change to Customer Activity
                 Intent i = new Intent(getView().getContext(), Availability.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
 
             }
@@ -77,6 +78,7 @@ public class Home_cook extends Fragment {
 
                 // Change to Customer Activity
                 Intent i = new Intent(getView().getContext(), upload_menu.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
 
             }
