@@ -91,6 +91,7 @@ public class UploadPhoto extends AppCompatActivity {
         intent.putExtra("Phone", i.getStringExtra("Phone"));
         intent.putExtra("Address", i.getStringExtra("Address"));
         intent.putExtra("Location", i.getStringExtra("Location"));
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 }

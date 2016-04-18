@@ -1,6 +1,7 @@
 package com.example.protichi.hestia_first;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Path;
@@ -102,8 +103,11 @@ public class Profile_cook extends Fragment {
                 if (isChecked) {
                     //Switch to Cook UI
                     Log.v("Toggle Button", "Cook UI");
+
                 } else {
                     Log.v("Toggle Button", "User UI");
+                    Intent i = new Intent(getContext(), User_homepage.class);
+                    startActivity(i);
 
                 }
 

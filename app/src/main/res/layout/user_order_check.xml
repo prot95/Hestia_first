@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.protichi.hestia_first.UserProgressPayment"
+    android:id="@+id/Relative1OrderProgress"
+    android:clickable="true">
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/img.tick"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/icon_tick"
+        android:layout_marginTop="62dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your order has been successfully placed!"
+        android:id="@+id/txt.orderSuccess"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="New Order"
+        android:id="@+id/btn.newOrder"
+        android:background="@color/actionbar_background"
+        android:onClick="onClickNewOrder"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <!--<ProgressBar-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--style="@android:style/Widget.ProgressBar.Horizontal"-->
+    <!--android:layout_marginBottom="100dp"-->
+    <!--android:minHeight="10dp"-->
+    <!--android:layout_marginLeft="50dp"-->
+    <!--android:minWidth="300dp"-->
+    <!--android:layout_marginRight="50dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="false"-->
+    <!--android:id="@+id/progressBar"-->
+    <!--android:foreground="#fab500"-->
+    <!--android:background="#d5d5c3" />-->
+
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:maxHeight="30dip"
+        android:minHeight="10dip"
+        android:progress="100"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:progressDrawable="@drawable/greenprogress"
+        android:layout_marginBottom="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

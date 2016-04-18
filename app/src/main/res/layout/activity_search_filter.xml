@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    tools:context="com.example.protichi.hestia_first.SearchFilter">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FILTERS"
+        android:id="@+id/txt.filters"
+        android:background="#FAB500"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:gravity="center_horizontal"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn.cross"
+        android:src="@drawable/cross_icon"
+        android:layout_alignBottom="@+id/txt.filters"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#FAB500" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn.rupee"
+        android:src="@drawable/snipped_rupee"
+        android:layout_below="@+id/txt.filters"
+        android:layout_marginTop="69dp"
+        android:background="#00ffffff"
+        android:layout_alignRight="@+id/btn.item"
+        android:layout_alignEnd="@+id/btn.item" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn.rupee"
+        android:id="@+id/btn.cook"
+        android:src="@drawable/cook_icon"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="#00ffffff" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/btn.item"
+        android:src="@drawable/fork_knife_icon"
+        android:background="#00010101"
+        android:layout_below="@+id/btn.cook"
+        android:layout_toLeftOf="@+id/btn.cross"
+        android:layout_toStartOf="@+id/btn.cross" />
+
+
+</RelativeLayout>

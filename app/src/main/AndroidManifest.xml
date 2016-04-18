@@ -6,6 +6,7 @@
         android:name="newsfeed.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:largeHeap="true"
         android:label="@string/app_name"
         android:theme="@style/CustomActionBarTheme">
         <activity
@@ -51,6 +52,40 @@
 
         <activity android:name=".CookUserOption" />
         <activity android:name=".Availability"></activity>
+
+    <activity android:name=".progress" />
+    <activity
+        android:name=".Search_User"
+        android:label="@string/title_activity_search__user" />
+    <activity
+        android:name=".ShoppingCart"
+        android:label="@string/title_activity_shopping_cart" />
+    <activity
+        android:name=".SearchFilter"
+        android:label="@string/title_activity_search_filter" />
+    <activity
+        android:name=".User_homepage"
+        android:label="@string/title_activity_user_homepage" />
+
+    <activity android:name=".UserHotLunchMeal"/>
+    <activity android:name=".Search" />
+    <activity android:name=".EmployeeList" />
+    <activity android:name=".EmployeeDetails" />
+    <!--<activity android:name=".EmployeeAction" />-->
+    <!--<activity android:name=".DatabaseHelper" />-->
+    <activity android:name=".CatalogActivity"
+        android:theme="@style/CustomActionBarTheme" />
+    <!-- <activity android:name=".Product"></activity> -->
+    <activity android:name=".ProductDetailsActivity" />
+    <activity android:name=".ShoppingCartActivity" />
+    <activity android:name=".BengaliCatalog" />
+    <activity android:name=".ItalianCatalog" />
+    <activity android:name=".ChineseCatalog" />
+    <activity android:name=".MughlaiCatalog" />
+    <activity android:name=".SouthIndianCatalog" />
+    <activity android:name=".UserOrderDetails"/>
+    <activity android:name=".UserOrderCheck"/>
+
     </application>
 
 </manifest>

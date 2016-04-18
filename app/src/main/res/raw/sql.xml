@@ -1,0 +1,61 @@
+<sql>
+	<statement>
+		CREATE TABLE IF NOT EXISTS employee (
+		_id INTEGER PRIMARY KEY AUTOINCREMENT,
+		firstName VARCHAR(50),
+		lastName VARCHAR(50),
+		title VARCHAR(50),
+		department VARCHAR(50),
+		managerId INTEGER,
+		city VARCHAR(50),
+		officePhone VARCHAR(30),
+		cellPhone VARCHAR(30),
+		email VARCHAR(30),
+		picture VARCHAR(200),
+		indexNumber VARCHAR(5))
+	</statement>
+	<statement>INSERT INTO employee VALUES(1,'Arhar Dal','','Ishita Tiwari','',1, '','45','8936483246','ryan@dundermifflin.com','howard.jpg','1')</statement>
+	<statement>INSERT INTO employee VALUES(2,'Chicken Curry','','Nikita Singhal','',1,'','100','8936483244','michael@dundermifflin.com','scott.jpg','2')</statement>
+	<statement>INSERT INTO employee VALUES(3,'Daal Makhani','','Nupur Sahney','',1,'','80','4234234234','dwight@dundermifflin.com','schrute.jpg','3')</statement>
+	<statement>INSERT INTO employee VALUES(4,'Butter Paneer','','Neha Chauhan','',1,'','80','2423535333','jim@dundermifflin.com','halpert.jpg','4')</statement>
+	<statement>INSERT INTO employee VALUES(5,'Shahi Paneer','','Sangeeta Gupta','',1,'','75','6387462387','pam@dundermifflin.com','beesly.jpg','5')</statement>
+	<statement>INSERT INTO employee VALUES(6,'Pasta','','Alikya Tayal','',1,'','90','9798181823','angela@dundermifflin.com','martin.jpg','6')</statement>
+	<statement>INSERT INTO employee VALUES(7,'Chowmein','','Nancy Moore','',1,'','50','982836276','kmalone@dundermifflin.com','malone.jpg','7')</statement>
+	<statement>INSERT INTO employee VALUES(8,'Aalo Parantha','','Shivangi Gupta','',1,'','20','9878363763','oscar@dundermifflin.com','martinez.jpg','8')</statement>
+
+	<statement>INSERT INTO employee VALUES(9,'Avacado Paratha','','Indu Sehgal','',1,'','30','9273392209','creed@dundermifflin.com','bratton.jpg','9')</statement>
+	<statement>INSERT INTO employee VALUES(10,'Paneer Chole','','Jena Ghosh','',1,'','90','9887423846','andy@dundermifflin.com','bernard.jpg','10')</statement>
+	<statement>INSERT INTO employee VALUES(11,'Black Urad Khichdi','','Jena Ghosa','',1,'','70','9748324734','phyllis@dundermifflin.com','lapin.jpg','11')</statement>
+	<statement>INSERT INTO employee VALUES(12,'Kaju Karela Sabji','','Sonia Mojumdar','',1,'','100','9736453256','shudson@dundermifflin.com','hudson.jpg','12')</statement>
+	<statement>INSERT INTO employee VALUES(13,'Pabda Macher Jhol','','Sonia Mojumdar','',1,'','200','9634523645','meredith@dundermifflin.com','palmer.jpg','13')</statement>
+	<statement>INSERT INTO employee VALUES(14,'Lau Ghanta','','Nupur Sahney','',1,'','170','97836266736','kelly@dundermifflin.com','kapoor.jpg','14')</statement>
+
+	<statement>INSERT INTO employee VALUES(15,'Shaami Kebab','','Nupur Sahney','',1, '','150','8936483246','ryan@dundermifflin.com','howard.jpg','15')</statement>
+	<statement>INSERT INTO employee VALUES(16,'Sheermaal','','Nupur Sahney','',1,'','50','8936483244','michael@dundermifflin.com','scott.jpg','16')</statement>
+	<statement>INSERT INTO employee VALUES(17,'Ulte Tawe ka Parantha','','Archana Jha','',1,'','40','4234234234','dwight@dundermifflin.com','schrute.jpg','17')</statement>
+	<statement>INSERT INTO employee VALUES(18,'Galawati Kebab','','Archana Jha','',1,'','160','2423535333','jim@dundermifflin.com','halpert.jpg','18')</statement>
+	<statement>INSERT INTO employee VALUES(19,'Chicken Quorma','','Priti Sahay','',1,'','100','6387462387','pam@dundermifflin.com','beesly.jpg','19')</statement>
+	<statement>INSERT INTO employee VALUES(20,'Veg Quorma','','Priti Sahay','',1,'','60','9798181823','angela@dundermifflin.com','martin.jpg','20')</statement>
+
+	<statement>INSERT INTO employee VALUES(21,'Chowmein','','Neha Patel','',1,'','80','982836276','kmalone@dundermifflin.com','malone.jpg','21')</statement>
+	<statement>INSERT INTO employee VALUES(22,'Veg Fried Rice','','Nupur Sahney','',1,'','70','9878363763','oscar@dundermifflin.com','martinez.jpg','22')</statement>
+	<statement>INSERT INTO employee VALUES(23,'Veg Manchurian','','Neha Patel','',1,'','90','9273392209','creed@dundermifflin.com','bratton.jpg','23')</statement>
+	<statement>INSERT INTO employee VALUES(24,'Chilli Chicken','','Nupur Sahney','',1,'','180','9887423846','andy@dundermifflin.com','bernard.jpg','24')</statement>
+	<statement>INSERT INTO employee VALUES(25,'Veg Sweet and Sour','','Zafeera Shakil','',1,'','120','9748324734','phyllis@dundermifflin.com','lapin.jpg','25')</statement>
+	<statement>INSERT INTO employee VALUES(26,'Egg Fried Rice','','Naureen Mustafa','',1,'','120','9736453256','shudson@dundermifflin.com','hudson.jpg','26')</statement>
+
+	<statement>INSERT INTO employee VALUES(27,'Chicken Parmesan','','Anuradha Tanka','',1,'','180','9634523645','meredith@dundermifflin.com','palmer.jpg','27')</statement>
+	<statement>INSERT INTO employee VALUES(28,'Sicilian Pizza','','Anuradha Tanka','',1,'','160','97836266736','kelly@dundermifflin.com','kapoor.jpg','28')</statement>
+	<statement>INSERT INTO employee VALUES(29,'Sicilian Pasta','','Shwta Kansal','',1,'','180','9273392209','creed@dundermifflin.com','bratton.jpg','29')</statement>
+	<statement>INSERT INTO employee VALUES(30,'Lasagna','','Nupur Sahney','',1,'','200','9887423846','andy@dundermifflin.com','bernard.jpg','30')</statement>
+	<statement>INSERT INTO employee VALUES(31,'Italian Meet Balls','','Shivani Singh','',1,'','190','9748324734','phyllis@dundermifflin.com','lapin.jpg','31')</statement>
+	<statement>INSERT INTO employee VALUES(32,'Pepper and Sausage','','Ishita Gupta','',1,'','160','9736453256','shudson@dundermifflin.com','hudson.jpg','32')</statement>
+
+	<statement>INSERT INTO employee VALUES(33,'Idli Sambar','','Kunti Sharma','',1,'','60','9634523645','meredith@dundermifflin.com','palmer.jpg','33')</statement>
+	<statement>INSERT INTO employee VALUES(34,'Vada Sambar','','Richa Ringh','',1,'','90','97836266736','kelly@dundermifflin.com','kapoor.jpg','34')</statement>
+	<statement>INSERT INTO employee VALUES(35,'Masala Dosa','','Indu Sharma','',1, '','80','8936483246','ryan@dundermifflin.com','howard.jpg','35')</statement>
+	<statement>INSERT INTO employee VALUES(36,'Plain Dosa','','Indu Sharma','',1,'','50','8936483244','michael@dundermifflin.com','scott.jpg','36')</statement>
+	<statement>INSERT INTO employee VALUES(37,'Masala Dosa','','Nupur Sahney','',1,'','65','4234234234','dwight@dundermifflin.com','schrute.jpg','37')</statement>
+	<statement>INSERT INTO employee VALUES(38,'Idiyappam','','Nidhi Gupta','',1,'','60','2423535333','jim@dundermifflin.com','halpert.jpg','38')</statement>
+
+</sql>

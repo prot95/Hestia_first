@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    tools:context=".CatalogActivity">
+    <!--android:height="?android:attr/listPreferredItemHeight"-->
+
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#b1252c"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_margin="5dip"
+        android:text="Food List"></TextView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        >
+    <ListView
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:height="?android:attr/listPreferredItemHeight"
+        android:id="@+id/ListViewCatalog"
+        android:layout_width="fill_parent"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:cacheColorHint="#ffffff"
+        android:dividerHeight="1dp"
+        android:requiresFadingEdge="horizontal"
+        android:layout_alignParentBottom="true"
+        android:elevation="2dp">
+    </ListView>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/ButtonViewCart"
+        android:text="View Shopping Cart"
+        android:background="#b1252c"
+        android:textColor="#FFFFFF"
+        ></Button>
+</LinearLayout>
