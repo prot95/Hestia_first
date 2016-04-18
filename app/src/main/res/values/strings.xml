@@ -11,5 +11,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_upload_menu">upload_menu</string>
     <string name="title_activity_add_item">Add_item</string>
+    <string name="title_activity_search__user">Search_User</string>
+    <string name="title_activity_shopping_cart">ShoppingCart</string>
+    <string name="title_activity_search_filter">SearchFilter</string>
+    <string name="title_activity_user_homepage">User_homepage</string>
+    <string name="title_activity_cook_upload_menu">CookUploadMenu</string>
 </resources>
 

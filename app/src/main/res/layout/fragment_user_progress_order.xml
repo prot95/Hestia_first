@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.protichi.hestia_first.UserProgressOrder"
+    android:id="@+id/Relative1OrderProgress"
+    android:clickable="false"
+    android:visibility="visible">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:id="@+id/linearLayout">
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ITEM"
+        android:id="@+id/txt.item"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@+id/txt.quantity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUANTITY"
+        android:id="@+id/txt.quantity"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:layout_alignTop="@+id/txt.price"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRICE"
+        android:id="@+id/txt.price"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_toRightOf="@+id/txt.quantity"
+        android:layout_toEndOf="@+id/txt.quantity"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/txt.item"
+        android:id="@+id/linearLayout2"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rajma"
+            android:id="@+id/txt.Rajma"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/txt.RajmaQty"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs 100"
+            android:id="@+id/txt.RajmaPrice"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/linearLayout2"
+        android:id="@+id/linearLayout3"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chole"
+            android:id="@+id/txt.Chole"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/txt.CholeQty"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="105dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs 80"
+            android:id="@+id/txt.CholePrice"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/linearLayout3"
+        android:id="@+id/linearLayout4"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roti"
+            android:id="@+id/txt.Roti"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:id="@+id/txt.RotiQty"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="120dp"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs 30"
+            android:id="@+id/txt.RotiPrice"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/linearLayout4"
+        android:id="@+id/linearLayout5"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="90dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOTAL"
+            android:id="@+id/txt.Total"
+            android:textSize="22dp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs 210"
+            android:id="@+id/txt.TotalAmount"
+            android:textSize="20dp"
+            android:layout_marginLeft="180dp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/progressBar1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--style="@android:style/Widget.ProgressBar.Horizontal"-->
+        <!--android:layout_marginBottom="100dp"-->
+        <!--android:layout_marginLeft="50dp"-->
+        <!--android:layout_marginRight="50dp"-->
+        <!--android:minHeight="10dp"-->
+        <!--android:minWidth="100dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="false"-->
+        <!--android:background="#d5d5c3"-->
+        <!--android:foreground="#fab500"-->
+        <!--android:secondaryProgress="300"-->
+        <!--android:secondaryProgressTint="#d5d5c3" />-->
+
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:maxHeight="30dip"
+        android:minHeight="10dip"
+        android:progress="33"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:progressDrawable="@drawable/greenprogress"
+        android:layout_marginBottom="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swipe right >> "
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:id="@+id/textView22"
+        android:gravity="right"
+        android:layout_alignTop="@+id/ProgressBar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="38dp" />
+
+
+</RelativeLayout>

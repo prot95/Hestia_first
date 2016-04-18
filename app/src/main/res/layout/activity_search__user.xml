@@ -1,0 +1,83 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.protichi.hestia_first.Search_User">
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            android:layout_alignParentBottom="true"
+            android:background="@color/actionbar_background"
+            app:tabGravity="fill"
+            android:fillViewport="true"
+            android:elevation="6dp"/>
+
+        <!--<EditText-->
+            <!--android:layout_width="330dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:inputType="textPersonName"-->
+            <!--android:hint="Search for Food, Dish, Cuisine..."-->
+            <!--android:ems="10"-->
+            <!--android:id="@+id/search_Dish"-->
+            <!--android:layout_weight="1"-->
+            <!--android:allowUndo="true"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="#909090" />-->
+
+
+        <!--<ImageView-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:id="@+id/img.shoppingCart"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:src="@drawable/shopping_cart" />-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:id="@+id/img.filter"-->
+            <!--android:src="@drawable/filter_image2"-->
+            <!--android:layout_below="@+id/search_Dish"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true" />-->
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Add Filters"-->
+        <!--android:id="@+id/btn.addFilter"-->
+        <!--android:background="#94ffb600"-->
+        <!--android:layout_alignTop="@+id/img.filter"-->
+        <!--android:layout_toRightOf="@+id/img.filter"-->
+        <!--android:layout_toEndOf="@+id/img.filter" />-->
+
+
+    <!--<ImageView-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:id="@+id/img.filter"-->
+        <!--android:src="@drawable/filter"-->
+        <!--android:layout_below="@+id/search_Dish"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+
+</RelativeLayout>

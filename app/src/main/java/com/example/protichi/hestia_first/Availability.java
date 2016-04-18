@@ -172,6 +172,7 @@ public class Availability extends AppCompatActivity{
                 }
 
                 Intent i = new Intent(getApplicationContext(), Cook_homepage.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 i.putStringArrayListExtra("availability", available);
                 startActivity(i);
 

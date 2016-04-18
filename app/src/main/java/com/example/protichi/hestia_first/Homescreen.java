@@ -63,6 +63,7 @@ public class Homescreen extends AppCompatActivity implements
             public void onClick(View v) {
                 // Perform action on click
                 Intent i = new Intent(getApplicationContext(), RegisterPage.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
             }
         });

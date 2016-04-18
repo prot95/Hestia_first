@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.protichi.hestia_first.Home_user"
+    android:id="@+id/Relative1"
+    android:clickable="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:id="@+id/linearLayout6">
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="532dp"
+            android:id="@+id/pastaImage"
+            android:src="@drawable/pasta"
+            android:gravity="top"
+            android:layout_marginBottom="313dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="Trending"
+            android:id="@+id/cart1"
+            android:background="#fba500"
+            android:onClick="onClickTrending"
+            android:layout_alignTop="@+id/italianCart"
+            android:layout_toLeftOf="@+id/italianCart"
+            android:layout_toStartOf="@+id/italianCart" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="Italian"
+            android:onClick="onClickItalian"
+            android:id="@+id/italianCart"
+            android:layout_alignTop="@+id/chineseCart"
+            android:layout_centerHorizontal="true"
+            android:background="#b1252c" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="Chinese"
+            android:onClick="onClickChinese"
+            android:id="@+id/chineseCart"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/italianCart"
+            android:background="#fba500"/>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="Bengali"
+            android:onClick="onClickBengali"
+            android:id="@+id/bengaliCart"
+            android:background="#b1252c"
+            android:layout_alignTop="@+id/southIndianCart"
+            android:layout_toLeftOf="@+id/southIndianCart"
+            android:layout_toStartOf="@+id/southIndianCart" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="South Indian"
+            android:onClick="onClickSouthIndian"
+            android:id="@+id/southIndianCart"
+            android:layout_below="@+id/cart1"
+            android:layout_centerHorizontal="true"
+            android:background="#fba500"/>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="Mughlai"
+            android:onClick="onClickMughlai"
+            android:background="#b1252c"
+            android:id="@+id/mughlaiCart"
+            android:layout_alignTop="@+id/southIndianCart"
+            android:layout_alignLeft="@+id/chineseCart"
+            android:layout_alignStart="@+id/chineseCart"
+            />
+
+        <ImageButton
+            android:layout_width="1000dp"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+            android:id="@+id/btn.search"
+            android:src="@drawable/search_button"
+            android:onClick="onFinalSearch"
+            android:text="Search"
+            android:background="#fba500"
+            android:layout_below="@+id/linearLayout6"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            app:backgroundTint="#b1252c"
+            android:src="@drawable/cart"
+            android:onClick="onActionButtonClickCart"
+            app:layout_anchorGravity="bottom|right|end"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/mughlaiCart"
+            android:layout_alignEnd="@+id/mughlaiCart"
+            android:layout_marginBottom="52dp" />
+        <!--android:background="#a6faf6ff"-->
+    </RelativeLayout>
+</RelativeLayout>
