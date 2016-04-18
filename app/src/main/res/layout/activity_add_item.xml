@@ -27,7 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/itemName"
-            android:hint="Item Name"/>
+            android:hint="Item Name"
+            android:inputType="textPersonName"
+            android:paddingBottom="10dp"/>
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,43 +64,70 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rate   Rs"
-                android:textSize="20dp"/>
+                android:text="Rate        Rs"
+                android:textSize="20dp"
+                android:layout_gravity="center"/>
             <EditText
-                android:layout_width="30dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/rate"
                 android:gravity="left"
+                android:hint="     "
                 android:inputType="number" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Unit   "
-                android:gravity="right"
-                android:textSize="20dp"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/unit"
-                android:hint="plate/pc/kg"/>
+
 
         </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unit(Rate per pc/plate/unit)  :"
+            android:gravity="right"
+            android:textSize="20dp"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:id="@+id/unitGroup">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plate"
+                android:id="@+id/plate"
+                android:checked="true"
+
+                android:gravity="center"/>
+
+            <RadioButton
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:text="Pc"
+                android:id="@+id/pc"
+                android:checked="false" />
+            <RadioButton
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:text="kg"
+                android:id="@+id/kg"
+                android:checked="false" />
+        </RadioGroup>
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
+            android:layout_height="match_parent"
             android:ems="10"
             android:id="@+id/description"
             android:hint="Description"
+            android:inputType="textShortMessage"
             android:layout_gravity="center_horizontal"
             android:paddingBottom= "20dp"/>
 
-        <TextView
+        <!--<TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Choose Menu for "
-            android:paddingBottom="10dp"/>
+            android:paddingBottom="10dp"/>-->
 
         <LinearLayout
             android:layout_width="match_parent"

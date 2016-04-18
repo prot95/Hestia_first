@@ -51,21 +51,7 @@ public class upload_lunch extends Fragment {
     //@amod remove the if condition once the app works fine with availibility
     private void getAvailableDays()
     {
-        Log.i("TAG", Integer.toString(user.availability.size()));
-        if(user.availability.size() == 0 ) //remove after checking with availibility button
-        {
-            date = new ArrayList<String>(Arrays.asList(hardcodeDate));
-            if(user.lunchHashMap.size()==0)
-            {
-                for(String d: date)
-                {
-                    user.lunchHashMap.put(d, null);
-                }
-            }
 
-        }
-
-        else
             date = user.availability;
 
         Log.i("TAG", Integer.toString(date.size()));

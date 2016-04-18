@@ -163,6 +163,10 @@ public class Availability extends AppCompatActivity{
                 User user = User.getInstance();
                 user.availability = available;
 
+                user.breakfastHashMap.clear();
+                user.lunchHashMap.clear();
+                user.dinnerHashMap.clear();
+
                 //protichi added this
                 for(String d:user.availability)
                 {

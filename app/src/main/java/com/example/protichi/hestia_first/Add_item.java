@@ -68,13 +68,7 @@ public class Add_item extends AppCompatActivity {
     private void getAvailableDays()
     {
         Log.i("TAG", Integer.toString(user.availability.size()));
-        if(user.availability.size() == 0) //remove after checking with availibility button
-        {
-            dates = new ArrayList<String>(Arrays.asList(hardcodeDate));
 
-        }
-
-        else
             dates = user.availability;
 
         Log.i("TAG", Integer.toString(dates.size()));
@@ -105,12 +99,11 @@ public class Add_item extends AppCompatActivity {
         Button button = (Button)findViewById(R.id.submit);
         itemName = ((EditText)findViewById(R.id.itemName)).getText().toString();
         rate = ((EditText)findViewById(R.id.rate)).getText().toString();
-        unit = ((EditText)findViewById(R.id.unit)).getText().toString();
         description = ((EditText)findViewById(R.id.description)).getText().toString();
 
 
 
-        if(itemName.equals("")||rate.equals("")||unit.equals("")||description.equals(""))
+        if(itemName.equals("")||rate.equals("")||description.equals(""))
         {
             Toast.makeText(this, "Enter all the fields", Toast.LENGTH_SHORT).show();
         }
@@ -119,7 +112,7 @@ public class Add_item extends AppCompatActivity {
             Intent browserIntent =
                     new Intent(this, upload_menu.class);
             menu.itemName = itemName;
-            menu.unit = unit;
+
             menu.rate = rate;
             menu.description = description;
             int vegButton = ((RadioGroup)findViewById(R.id.vegGroup)).getCheckedRadioButtonId();
@@ -127,6 +120,14 @@ public class Add_item extends AppCompatActivity {
                 menu.isVeg=1;
             else menu.isVeg=0;
 
+            int unitButton = ((RadioGroup)findViewById(R.id.unitGroup)).getCheckedRadioButtonId();
+            if(unitButton==R.id.plate)
+                unit = "Plate";
+            else if(unitButton==R.id.pc)
+                unit = "Pc";
+            else
+                unit = "Kg";
+            menu.unit = unit;
             //add menu for that particular date
             if(mealType.equals("breakfast"))
                 user.breakfastHashMap.put(date, menu);

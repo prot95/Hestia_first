@@ -50,20 +50,7 @@ public class upload_dinner extends Fragment {
     private void getAvailableDays()
     {
         Log.i("TAG", Integer.toString(user.availability.size()));
-        if(user.availability.size() == 0 ) //remove after checking with availibility button
-        {
-            date = new ArrayList<String>(Arrays.asList(hardcodeDate));
-            if(user.dinnerHashMap.size()==0)
-            {
-                for(String d: date)
-                {
-                    user.dinnerHashMap.put(d, null);
-                }
-            }
 
-        }
-
-        else
             date = user.availability;
 
         Log.i("TAG", Integer.toString(date.size()));
@@ -100,7 +87,7 @@ public class upload_dinner extends Fragment {
             TextView displaydate = new TextView(getActivity());
             displaydate.setText("Set Availiblity First");
             displaydate.setGravity(Gravity.CENTER);
-            displaydate.setTextSize(5);
+
             ll.addView(displaydate);
 
             lm.addView(ll);

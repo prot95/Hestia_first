@@ -22,17 +22,17 @@
         </activity>
         <activity
             android:name=".Cook_homepage"
-            android:label="@string/title_activity_cook_homepage"
-            android:parentActivityName=".UploadPhoto">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".UploadPhoto" />
+            android:label="@string/title_activity_cook_homepage">
         </activity>
         <activity
             android:name=".upload_menu"
-            android:label="@string/title_activity_cook_homepage"/>
+            android:label="@string/title_activity_cook_homepage"
+            android:parentActivityName=".Cook_homepage">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".RegisterPage" />
 
-
+        </activity>
 
         <activity android:name=".Homescreen">
             <intent-filter>
@@ -51,7 +51,11 @@
         </activity>
 
         <activity android:name=".CookUserOption" />
-        <activity android:name=".Availability"></activity>
+        <activity android:name=".Availability"
+            android:parentActivityName=".Cook_homepage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Cook_homepage" /></activity>
 
     <activity android:name=".progress" />
     <activity

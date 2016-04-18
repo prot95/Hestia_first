@@ -128,7 +128,7 @@
         android:id="@+id/button2"
         android:background="@color/actionbar_background"
         android:textColor="#ffffff"
-        
+
         android:layout_alignParentBottom="true"
 
 
