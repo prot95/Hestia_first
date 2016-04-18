@@ -161,6 +161,14 @@ public class Availability extends Activity {
                 User user = User.getInstance();
                 user.availability = available;
 
+                //protichi added this
+                for(String d:user.availability)
+                {
+                    user.breakfastHashMap.put(d, null);
+                    user.lunchHashMap.put(d,null);
+                    user.dinnerHashMap.put(d,null);
+                }
+
                 Intent i = new Intent(getApplicationContext(), Cook_homepage.class);
                 i.putStringArrayListExtra("availability", available);
                 startActivity(i);
