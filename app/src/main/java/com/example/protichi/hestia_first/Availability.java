@@ -1,8 +1,9 @@
 package com.example.protichi.hestia_first;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.Objects;
 
-public class Availability extends Activity {
+public class Availability extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,8 @@ public class Availability extends Activity {
         //getActionBar().setDisplayShowTitleEnabled(false);
         //getActionBar().setDisplayShowCustomEnabled(true);
         //getSupportActionBar().setCustomView(R.layout.actionbar_layout);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Set Availability");
 
         final CheckBox box1 = (CheckBox) findViewById(R.id.checkBox);
         final CheckBox box2 = (CheckBox) findViewById(R.id.checkBox2);

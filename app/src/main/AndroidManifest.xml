@@ -33,7 +33,8 @@
 
 
 
-        <activity android:name=".Homescreen">
+        <activity android:name=".Homescreen"
+            android:theme="@style/Tab_layout">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -49,8 +50,15 @@
             android:parentActivityName=".upload_menu" >
         </activity>
 
-        <activity android:name=".CookUserOption" />
-        <activity android:name=".Availability"></activity>
+        <activity android:name=".CookUserOption"></activity>
+        <activity android:name=".Availability"
+            android:parentActivityName=".Cook_homepage"
+            android:theme="@style/CustomActionBarTheme">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Cook_homepage" />
+        </activity>
     </application>
 
 </manifest>

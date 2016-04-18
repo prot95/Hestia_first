@@ -31,10 +31,10 @@ public class RegisterPage extends AppCompatActivity implements AdapterView.OnIte
 
         // Spinner Drop down elements
         List<String> categories = new ArrayList<String>();
-        categories.add("Dwarka Sector 10");
-        categories.add("Dwarka Sector 11");
-        categories.add("Okhla Phase 3");
-        categories.add("Noida");
+        categories.add("Dwarka");
+        categories.add("I.P Ext");
+        categories.add("Defence Colony");
+        categories.add("Bharti Nagar");
 
 
         // Creating adapter for spinner

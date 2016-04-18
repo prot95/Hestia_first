@@ -9,7 +9,8 @@
         <item name="android:actionBarStyle">@style/MyActionBar</item>
         <item name="android:actionBarTabTextStyle">@style/MyActionBarTabText</item>
         <item name="android:actionMenuTextColor">@color/actionbar_text</item>
-
+        <!--   your app branding color for the app bar -->
+        <item name="colorPrimary">@color/actionbar_background</item>
         <!-- Support library compatibility -->
         <item name="actionBarStyle">@style/MyActionBar</item>
         <item name="actionBarTabTextStyle">@style/MyActionBarTabText</item>
@@ -53,7 +54,7 @@
         <!--   your app branding color for the app bar -->
         <item name="colorPrimary">@color/actionbar_background</item>
         <!--   darker variant for the status bar and contextual app bars -->
-        <item name="colorPrimaryDark">#fba50f</item>
+        <item name="colorPrimaryDark">@color/actionbar_background</item>
         <!--   theme UI controls like checkboxes and text fields -->
         <item name="colorAccent">#B01E1E</item>
     </style>
