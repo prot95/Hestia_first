@@ -103,6 +103,7 @@ public class Profile_user extends Fragment {
                 if (isChecked) {
                     //Switch to Cook UI
                     Intent i = new Intent(getContext(), Cook_homepage.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(i);
 
                     Log.v("Toggle Button", "Cook UI");
