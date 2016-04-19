@@ -45,7 +45,7 @@
 	<statement>INSERT INTO employee VALUES(26,'Egg Fried Rice','','Naureen Mustafa','',1,'','120','9736453256','shudson@dundermifflin.com','hudson.jpg','26')</statement>
 
 	<statement>INSERT INTO employee VALUES(27,'Chicken Parmesan','','Anuradha Tanka','',1,'','180','9634523645','meredith@dundermifflin.com','palmer.jpg','27')</statement>
-	<statement>INSERT INTO employee VALUES(28,'Sicilian Pizza','','Anuradha Tanka','',1,'','160','97836266736','kelly@dundermifflin.com','kapoor.jpg','28')</statement>
+	<statement>INSERT INTO employee VALUES(28,'Sicilian Pizza','','Anuradha Tanka','',1,'','160','97836266736','kelly@dundermiffli.com','kapoor.jpg','28')</statement>
 	<statement>INSERT INTO employee VALUES(29,'Sicilian Pasta','','Shwta Kansal','',1,'','180','9273392209','creed@dundermifflin.com','bratton.jpg','29')</statement>
 	<statement>INSERT INTO employee VALUES(30,'Lasagna','','Nupur Sahney','',1,'','200','9887423846','andy@dundermifflin.com','bernard.jpg','30')</statement>
 	<statement>INSERT INTO employee VALUES(31,'Italian Meet Balls','','Shivani Singh','',1,'','190','9748324734','phyllis@dundermifflin.com','lapin.jpg','31')</statement>

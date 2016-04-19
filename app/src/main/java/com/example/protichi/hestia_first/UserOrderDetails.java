@@ -41,6 +41,7 @@ public class UserOrderDetails extends AppCompatActivity {
 
     public void onClickOrderNow(View view)
     {
+        flag =0;
 
         if(name.getText().toString().equals("") || address.getText().toString().equals("") || mobile.getText().toString().equals(""))
         {
